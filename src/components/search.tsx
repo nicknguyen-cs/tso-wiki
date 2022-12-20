@@ -2,7 +2,7 @@ import algoliasearch from 'algoliasearch/lite';
 import React from 'react';
 import { Hits, InstantSearch, Pagination, Menu, SearchBox, Configure, Highlight, RefinementList } from 'react-instantsearch-hooks-web';
 import parse from 'html-react-parser';
-const searchClient = algoliasearch('', '');
+const searchClient = algoliasearch('ZXYH5BFSLN', '4b8c0fcee71ac4fe3fe1c891ef9e7feb');
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
@@ -10,14 +10,16 @@ function Search() {
     return (
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-5" aria-label="Top">
             <InstantSearch searchClient={searchClient} indexName="sa-wiki">
-                <div className="panel-left">
-                    <RefinementList attribute="category" sortBy={['name:asc']} showMore />
-                </div>
-                <div className="panel-right items-start">
-                    <SearchBox />
-                    <Configure hitsPerPage={5} />
-                    <Hits hitComponent={Hit} />
-                    <Pagination />
+                <div className="flex">
+                    <div className="panel-left">
+                        <RefinementList attribute="category" sortBy={['name:asc']} showMore />
+                    </div>
+                    <div className="panel-right w-full">
+                        <SearchBox />
+                        <Configure hitsPerPage={5} />
+                        <Hits hitComponent={Hit} />
+                        <Pagination />
+                    </div>
                 </div>
             </InstantSearch>
         </nav>
