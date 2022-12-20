@@ -52,41 +52,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.ais-SearchBox-form {
-  background-color: white;
-  display: flex;
-  font-size: 0.875rem;
-  height: 2.5rem;
-  line-height: 1.25rem;
-  position: relative;
-  width: 100%;
+.panel-left {
+  min-width:160px;
+  margin-right:20px;
+  display: block;
+  float:left
 }
 
-.ais-SearchBox-form::before {
-  background: rgba(0, 0, 0, 0)
-    url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%235a5e9a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%228%22%3E%3C%2Fcircle%3E%3Cline%20x1%3D%2221%22%20y1%3D%2221%22%20x2%3D%2216.65%22%20y2%3D%2216.65%22%3E%3C%2Fline%3E%3C%2Fsvg%3E')
-    repeat scroll 0% 0%;
-  content: '';
-  height: 1rem;
-  left: 1rem;
-  margin-top: -0.5rem;
-  position: absolute;
-  top: 50%;
-  width: 1rem;
-}
-
-.ais-SearchBox-input {
-  appearance: none;
-  background-color: white;
-  border: 1px solid grey;
-  border-radius: 3px;
-  box-shadow: rgba(grey, 0.3) 0 1px 4px 0 inset;
-  caret-color: grey;
-  color: grey;
-  flex: 1 1 0%;
-  font: inherit;
-  max-width: 100%;
-  padding-left: 2.5rem;
+.panel-right {
+  float:right;
 }
 
 
